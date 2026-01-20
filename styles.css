@@ -52,3 +52,20 @@ h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+.container {
+  max-width: 800px;
+  max-height: 800px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  border: 1px solid #000;
+  flex: 1 0 200px;
+  height: 200px;
+}
