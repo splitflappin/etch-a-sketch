@@ -16,14 +16,15 @@ function buildBoard(num = 16) {
   container.textContent = "";
 
   for (let i = 0; i < num * num; i++) {
+    const colorSq = randoColor();
     const divEl = document.createElement("div");
     divEl.classList.add("square");
 
     divEl.style.height = 960 / num + "px";
     divEl.style.flexBasis = (1 / num) * 100 + "%";
     divEl.style.opacity = 0.01;
-    divEl.style.backgroundColor = randoColor();
-    divEl.style.border = "1px solid rgba(0, 0, 0, 0.5)";
+    divEl.style.backgroundColor = colorSq;
+    divEl.style.border = `1px solid ${colorSq}`;
 
     container.appendChild(divEl);
   }
